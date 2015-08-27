@@ -1,0 +1,34 @@
+//variables para posicion en x
+int posx = 1;
+int dir = 1;
+int vel=15;
+//variables para posicion en y
+int vely=5;
+int posy = 3;
+int diry=1;
+
+
+void setup (){
+  size (500,500);
+}
+
+
+void draw () {
+  background (0);
+ //codigo para actualizar posx y posy 
+  posx=posx + (vel*dir);
+  posy=posy + (vely*diry);
+  
+  ellipse (posx,posy,20,20);
+//condicional para mover la elipse en x
+  if (posx > 499 || posx <0){
+   dir=dir*-1;
+  }
+//condicional para mover la elipse en y   
+   if (posy >499 || posy <0){
+     diry=diry*-1;
+
+
+  }
+
+}
